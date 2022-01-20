@@ -1,0 +1,3 @@
+[pyrogram]
+api_id = <your telegram api id>
+api_hash = <your telegram api hash>

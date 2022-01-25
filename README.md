@@ -38,7 +38,7 @@ Run script
 $ python message-count.py
 ```
 It may take some time, but eventually script will send
-a message to target chat from you account. It will look like this:
+a message to target chat from your account. It will look like this:
 ```text
 Статистика сообщений и пользователей в этом чате (Название чата)
 

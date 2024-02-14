@@ -21,8 +21,8 @@ your **telegram api id** an **api hash**<br>
 You can read instructions on how to get this credentials
 in [official Telegram documentation](https://core.telegram.org/api/obtaining_api_id)
 ```shell
-$ cp config.ini.template config.ini
-$ nano config.ini
+$ cp config.py.template config.py
+$ nano config.py
 ```
 ### How to use
 First you need to find out the chat id where you what to count messages.

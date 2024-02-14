@@ -1,0 +1,2 @@
+api_id: int = <your telegram api id>
+api_hash: str = <your telegram api hash>

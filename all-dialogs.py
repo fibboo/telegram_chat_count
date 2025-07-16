@@ -11,7 +11,6 @@ with app:
         # name = ' '.join([i for i in name_data if i is not None])
         # print(name, dialog.chat.id)
         if dialog.chat.title in [
-            'FIRE 🔥 ЧАТ',
-            'RationalAnswer Chat'
+            'Some chat name',
         ]:
             print(dialog.chat.title, dialog.chat.id)

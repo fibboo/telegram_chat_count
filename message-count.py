@@ -5,7 +5,7 @@ from pyrogram import Client
 
 from config import api_id, api_hash
 
-chat_id = -1001619650644  # chat id in which you what to count messages
+chat_id = -1001698550644  # chat id in which you what to count messages
 
 
 def chat_message_rating():
@@ -121,9 +121,10 @@ async def chats_statistics(chat_ids: list[str], date_from: datetime, date_to: da
 
 if __name__ == "__main__":
     chat_ids = [
-        '-1001163885366',
-        '-1001324794832',
-
+        # Add your chat IDs here
+        # For example:
+        # "-1001163885366",
+        # "-1001323994832",
     ]
     days_between = 3
     date_from = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=days_between + 1)

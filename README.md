@@ -1,10 +1,12 @@
 # telegram chat messages count
 ### About
-This aps has two py files.
-1. all-dialogs.py show in console all dialogs.
+This app has three py files.
+1. all-dialogs.py shows in console all dialogs.
 2. message-count.py counts all messages in specified chat
 and sends message to target chat with top 10 users
 by message count. <br>
+3. download-messages.py downloads messages and attached files
+from specified chats and saves them to a local directory. <br>
 
 It is made with a help of [Pyrogram](https://github.com/pyrogram/pyrogram)
 ### How to install
@@ -59,3 +61,31 @@ a message to target chat from your account. It will look like this:
 
 1. Петя (@petya): 7620 (9.55%)
 ```
+
+### How to download messages and files
+To download messages and attached files from a Telegram chat, first find the chat ID using the all-dialogs.py script as described above. Then run the download-messages.py script:
+
+```shell
+$ python download-messages.py
+```
+
+The script will prompt you to enter a chat ID if none are specified in the script. You can also edit the script to add chat IDs directly:
+
+1. Open download-messages.py
+2. Find the `chat_ids` list (around line 124)
+3. Add your chat IDs to the list, for example:
+   ```python
+   chat_ids = [
+       "-1001163044366",
+       "-1009374794832",
+   ]
+   ```
+
+The script will:
+1. Create a "downloads" directory in the current folder
+2. Create a subdirectory for each chat using the chat ID
+3. Save all messages to a "messages.txt" file in chronological order (oldest to newest)
+4. Download all media files (photos, documents, videos, audio, voice messages)
+5. Name files with message ID, date/time, and media type (e.g., "msg12345_20230515_123045_photo_1")
+6. Handle multiple files attached to a single message with sequential numbering
+7. Show progress and statistics during the download

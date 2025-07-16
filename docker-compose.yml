@@ -1,0 +1,6 @@
+services:
+
+  telegram-api:
+    build: .
+    volumes:
+      - .:/app
